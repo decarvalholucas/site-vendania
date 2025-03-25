@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store App's - KING PLAY</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Faz o footer ficar na parte de baixo */
+    html, body {
+      height: 100%;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #000; /* Fundo preto */
+      color: #fff;
+      display: flex;             /* Torna flex */
+      flex-direction: column;    /* Coloca conteúdo em coluna */
+      min-height: 100vh;         /* Ocupa toda a tela vertical */
+    }
+    main {
+      flex: 1; /* Empurra o footer pro fim da tela */
+    }
+
+    /* Cabeçalho */
+    header {
+      text-align: center;
+      background-color: #121212;
+      padding: 15px 0;
+    }
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ff0000; /* Destaque vermelho */
+      text-decoration: none;
+    }
+
+    /* Banner */
+    .banner {
+      background: url('https://i.ibb.co/cTWLQML/FUNDO.gif') center/cover no-repeat;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .banner h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .banner img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center; /* Centraliza texto e elementos internos */
+    }
+    .intro {
+      color: #ccc;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    /* Grade de Apps - centralizada */
+    .grid-apps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center; /* Centraliza cartões */
+    }
+    .card {
+      background: #111;
+      border: 1px solid #444;
+      border-radius: 6px;
+      width: 240px;
+      padding: 20px;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+    .btn-download {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background: #ff0000;
+      padding: 10px 15px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .btn-download:hover {
+      background: #c30000;
+    }
+
+    /* Rodapé */
+    footer {
+      background: #121212;
+      text-align: center;
+      padding: 15px;
+    }
+    footer p {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* Responsividade simples */
+    @media (max-width: 600px) {
+      .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <a href="#" class="logo">KINK PLAY</a>
+  </header>
+
+  <!-- Conteúdo principal dentro de <main> -->
+  <main>
+    <!-- Banner -->
+    <section class="banner">
+      <h1>Bem-vindo(a)</h1>
+    </section>
+
+    <!-- Container principal -->
+    <div class="container">
+      <div class="intro">
+        <p>Dois apps confiáveis, seguros e cheios de conteúdo. Baixe sem medo e aproveite!</p>
+      </div>
+
+      <!-- Grade de Apps -->
+      <div class="grid-apps">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="https://i.imgur.com/XSZ7YFs.jpeg" alt="App 1">
+          <h3>KING PLAY</h3>
+          <p>Cód Downloader: <strong>712283</strong></p>
+          <a class="btn-download" href="https://download1589.mediafire.com/3gb2tanaxkogB5IyPIii5r09LaBqXFc6lUMZUdVIate_WnUk9o7BK_GmVVX9l6gVND2NlAas2z08HNOy7kfMIerWXEiZksmmGxCwGjiLM4fPGe5boHvGF_u0lOz2TK15uHenP1kAalpb9Myh74rWbPSnbt4LEPlKLbwPuR4kiaBetA/g75iqfmx8uw5tu2/KING+PLAY.apk" target="_blank">
+            DOWNLOAD
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="https://i.imgur.com/XSZ7YFs.jpeg" alt="App 2">
+          <h3>KING PLAY V3</h3>
+          <p>Cód Downloader: <strong>892032</strong></p>
+          <a class="btn-download" href="https://download1324.mediafire.com/utyrzcccimsgaVlsK0C3tJZAYiKYZ13x7s9ph7s2PIyIZqhUBxiUnL3uexPnGZbtly6ouxKqDc0tjFyBViXMtWlC9KAt0q09iY9hUzAg2Vv7h3YG-cSzLpNBD1QZI44LXkIIW3MEzhl_xc4CSE1PwOW70DeA_2j6n_BxVtqmZV0jcw/9wcfj9q1wbo9tax/KING+PLAY+V3.apk" target="_blank">
+            DOWNLOAD
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 KINK PLAY - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
