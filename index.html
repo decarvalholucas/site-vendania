@@ -89,7 +89,7 @@
     /* Novo estilo para o cartão em destaque (KING PLAY V4) */
     .card-featured {
       width: 300px; /* Torna o cartão maior no desktop */
-      border: 1px solid #ff0000; /* Opcional: Adiciona um destaque na borda */
+      border: 1px solid #ff0000; /* Destaque na borda */
     }
 
     .card img {
@@ -132,12 +132,16 @@
 
     /* Responsividade simples */
     @media (max-width: 600px) {
-      /* No celular, todos os cartões (incluindo o maior) ocupam a largura total,
-         e o V4 aparece em primeiro por estar primeiro no HTML. */
+      /* No celular, os cartões ocupam a largura total. */
       .card {
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
+        order: 1; /* Ordem padrão para os cartões regulares */
+      }
+      /* Força o KING PLAY V4 a ser o primeiro na ordem de exibição no celular. */
+      .card-featured {
+        order: -1; 
       }
     }
   </style>
@@ -158,20 +162,20 @@
       </div>
 
       <div class="grid-apps">
-        <div class="card card-featured">
-          <img src="https://i.imgur.com/095Rgbz.jpeg" alt="KING PLAY V4">
-          <h3>KING PLAY V4</h3>
-          <p>Cód Downloader: <strong>5876342</strong></p>
-          <a class="btn-download" href="http://aftv.news/5876342" target="_blank">
-            DOWNLOAD
-          </a>
-        </div>
-
         <div class="card">
           <img src="https://i.imgur.com/tPqEve6.jpeg" alt="KING PLAY">
           <h3>KING PLAY</h3>
           <p>Cód Downloader: <strong>712283</strong></p>
           <a class="btn-download" href="https://download1589.mediafire.com/3gb2tanaxkogB5IyPIii5r09LaBqXFc6lUMZUdVIate_WnUk9o7BK_GmVVX9l6gVND2NlAas2z08HNOy7kfMIerWXEiZksmmGxCwGjiLM4fPGe5boHvGF_u0lOz2TK15uHenP1kAalpb9Myh74rWbPSnbt4LEPlKLbwPuR4kiaBetA/g75iqfmx8uw5tu2/KING+PLAY.apk" target="_blank">
+            DOWNLOAD
+          </a>
+        </div>
+
+        <div class="card card-featured">
+          <img src="https://i.imgur.com/095Rgbz.jpeg" alt="KING PLAY V4">
+          <h3>KING PLAY V4</h3>
+          <p>Cód Downloader: <strong>5876342</strong></p>
+          <a class="btn-download" href="http://aftv.news/5876342" target="_blank">
             DOWNLOAD
           </a>
         </div>
