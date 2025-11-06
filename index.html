@@ -82,9 +82,16 @@
       background: #111;
       border: 1px solid #444;
       border-radius: 6px;
-      width: 240px;
+      width: 240px; /* Tamanho padrão */
       padding: 20px;
     }
+    
+    /* Novo estilo para o cartão em destaque (KING PLAY V4) */
+    .card-featured {
+      width: 300px; /* Torna o cartão maior no desktop */
+      border: 1px solid #ff0000; /* Opcional: Adiciona um destaque na borda */
+    }
+
     .card img {
       max-width: 100%;
       border-radius: 4px;
@@ -125,6 +132,8 @@
 
     /* Responsividade simples */
     @media (max-width: 600px) {
+      /* No celular, todos os cartões (incluindo o maior) ocupam a largura total,
+         e o V4 aparece em primeiro por estar primeiro no HTML. */
       .card {
         width: 100%;
         max-width: 300px;
@@ -134,27 +143,30 @@
   </style>
 </head>
 <body>
-  <!-- Cabeçalho -->
   <header>
     <a href="#" class="logo">KING PLAY</a>
   </header>
 
-  <!-- Conteúdo principal dentro de <main> -->
   <main>
-    <!-- Banner -->
     <section class="banner">
       <h1>Bem-vindo(a)</h1>
     </section>
 
-    <!-- Container principal -->
     <div class="container">
       <div class="intro">
         <p>Dois apps confiáveis, seguros e cheios de conteúdo. Baixe sem medo e aproveite!</p>
       </div>
 
-      <!-- Grade de Apps -->
       <div class="grid-apps">
-        <!-- Card 1 -->
+        <div class="card card-featured">
+          <img src="https://i.imgur.com/095Rgbz.jpeg" alt="KING PLAY V4">
+          <h3>KING PLAY V4</h3>
+          <p>Cód Downloader: <strong>5876342</strong></p>
+          <a class="btn-download" href="http://aftv.news/5876342" target="_blank">
+            DOWNLOAD
+          </a>
+        </div>
+
         <div class="card">
           <img src="https://i.imgur.com/tPqEve6.jpeg" alt="KING PLAY">
           <h3>KING PLAY</h3>
@@ -164,7 +176,6 @@
           </a>
         </div>
 
-        <!-- Card 2 -->
         <div class="card">
           <img src="https://i.imgur.com/XSZ7YFs.jpeg" alt="KING PLAY V3">
           <h3>KING PLAY V3</h3>
@@ -177,7 +188,6 @@
     </div>
   </main>
 
-  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 KING PLAY - Todos os direitos reservados.</p>
   </footer>
